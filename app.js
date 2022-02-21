@@ -120,7 +120,14 @@ QUESTION 4.5
 ৪.৫. [এক্সট্রা আরেকটা হোম ওয়ার্ক। এইটা ভিডিওতে বলা নাই]: জাভাস্ক্রিপ্ট এর var, let, const এর মধ্যে প্রার্থক্য কি? 
 
 ==========================================================================*/
+/* 
+1. jokhon amra var diye kono variable declar korbo tokhon var value amra jokhon iccha tokhon change korte parbo .
 
+2. ler diye variable declear korbe akbr amra tar value poriborton korte parbo .
+
+3. const diye tar value akbar declear korte parbo
+
+*/
 
 
 
@@ -152,6 +159,23 @@ QUESTION 6
 ৬. [ চ্যালেঞ্জিং। গুগলে সার্চ দিয়ে বের করো ] অনেকগুলা সংখ্যার একটা array থেকে শুধু বিজোড় সংখ্যা বের করে নিয়ে আসার জন্য filter ইউজ করো 
 =======================================================*/
 
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+const odds = arr.filter(number => {
+	return number % 2 !== 0;
+});
+
+console.log(odds);
+
+
+//odd array part 2
+
+const oddArr = [1, 3, 5, 4, 2, 9, 19, 30, 44];
+const oddNumber = oddArr.filter(numb => {
+	return numb % 2 !== 0;
+});
+
+console.log(oddNumber);
 
 
 
@@ -190,7 +214,49 @@ console.log(fiveThousandPrice);
 QUESTION 7.5
 ৭.৫ [এক্সট্রা] জাভাস্ক্রিপ্ট এ array এর map, forEach, filter, find কোনটা দিয়ে কি হয়। সেটার একটা সামারি লিখে ফেলো। 
 =============================================================*/
+/* 
+Map() --  এর কাজ হচ্ছে  একটা  অ্যারের মধো প্রত্যকটি ইলিমেন্টের এর জন্য ফাংশনকে কল করে এবং সব ফাংশনের রেজাল্টকে একটা নতুন অ্যারের মধ্যে রেখে  রিটান করে।
+example :
+const number = [4, 6, 8, 10];
+const output = numbers.map(number => number * 2);
+cosole.log(output); === 8, 12, 16, 20
 
+
+
+forEach()  একটি  অ্যারের প্রতিটি উপাদানের জন্য একটি মাত্র ফাংশন কল করে।
+example :
+const products = [
+	{ name: "water-bottle", price: 50, color: "black"},
+	{ name: "water", price: 15, color: "red"}
+];
+const productPrice = products.forEach(pro => pro.name);
+console.log(productPrice);
+
+
+
+filte() ----  ফিল্টারের কাজ হচ্ছে প্রতিটি  উপাদানের মধ্য যে উপাদান র্শত  ফুলফিল করে তাকে রিটান করে।
+example :
+const numbers = [10, 50, 12, 60];
+cosnt biggestNumber = numbers.filter(number => number < 10);
+console.log(biggestNumber);
+*/
+
+
+//forEach concepts
+const items = [
+	{ name: "water-bottle", price: 50, color: "black" },
+	{ name: "water", price: 15, color: "red" }
+];
+const productPrice = items.forEach(pro => pro.color);
+console.log("for each concept is " + productPrice);
+
+
+
+
+//filter concept
+const numbers = [10, 50, 12, 60];
+const biggestNumber = numbers.filter(number => number > 10);
+console.log("Filter biggest number is " + biggestNumber);
 
 
 
@@ -225,6 +291,22 @@ console.log(year);
 QUESTION 9
 ৯. [চ্যালেঞ্জিং] array এর destructuring করবে আর সেটা করার জন্য তুমি এরে এর থার্ড পজিশন এর উপাদান কে destructuring করে 'three' নামক একটা ভেরিয়েবল এ রাখবে। 
 ==============================================================*/
+
+const nestedObject = {
+	name: "Banglalink",
+	age: 27,
+	hobby: "Playing",
+	work: {
+		place: "Madaripur",
+		place: "Faridpur",
+		teach: {
+			subject1: "bangla",
+			subject2: "english",
+			tree: "Mango"
+		}
+	}
+};
+console.log(nestedObject.work.teach.tree);
 
 
 
@@ -261,7 +343,6 @@ QUESTION 11
 
 ১১. একটা nested অবজেক্ট ডিক্লেয়ার করো (অর্থাৎ একটা অবজেক্ট এর প্রপার্টি এর মধ্যেও যে অবজেক্ট থাকতে পারে। আবার সেই অবজেক্ট এর প্রপার্টি এর মধ্যেও সে অবজেক্ট থাকতে পারে। সেই রকম একটা অবজেক্ট ডিক্লেয়ার করো। এবং যেকোন একটা প্রপার্টি এর মান একটা array হবে। জাস্ট এমন একটা অবজেক্ট )
 ========================================================*/
-
 
 
 
