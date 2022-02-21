@@ -359,3 +359,212 @@ QUESTION 12
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*===========================My Practice ================================
+MY PRCTICE ALL MY PRCTICE ALL MY PRCTICE ALL  MY PRCTICE ALL  MY PRCTICE ALL  
+MY PRCTICE ALL MY PRCTICE ALL MY PRCTICE ALL  MY PRCTICE ALL  MY PRCTICE ALL  
+MY PRCTICE ALL MY PRCTICE ALL MY PRCTICE ALL  MY PRCTICE ALL  MY PRCTICE ALL  
+MY PRCTICE ALL MY PRCTICE ALL MY PRCTICE ALL  MY PRCTICE ALL  MY PRCTICE ALL  
+MY PRCTICE ALL MY PRCTICE ALL MY PRCTICE ALL  MY PRCTICE ALL  MY PRCTICE ALL  
+MY PRCTICE ALL MY PRCTICE ALL MY PRCTICE ALL  MY PRCTICE ALL  MY PRCTICE ALL  
+MY PRCTICE ALL MY PRCTICE ALL MY PRCTICE ALL  MY PRCTICE ALL  MY PRCTICE ALL  
+MY PRCTICE ALL MY PRCTICE ALL MY PRCTICE ALL  MY PRCTICE ALL  MY PRCTICE ALL  
+MY PRCTICE ALL MY PRCTICE ALL MY PRCTICE ALL  MY PRCTICE ALL  MY PRCTICE ALL  
+MY PRCTICE ALL MY PRCTICE ALL MY PRCTICE ALL  MY PRCTICE ALL  MY PRCTICE ALL  
+MY PRCTICE ALL MY PRCTICE ALL MY PRCTICE ALL  MY PRCTICE ALL  MY PRCTICE ALL  
+
+*/
+//sprate operator
+const first = [10, 20, 30, 40];
+const second = [50, 60, 70, 80];
+const name = ["sanjoy", "siraz", "robin", "likhon"];
+const third = [...first, ...second, ...name];
+console.log(third);
+
+
+
+
+//============Highest and lowest value======================================
+//finding biggeset number using array
+const biggesetNumber = Math.max(100, 200, 50, 40, 44, 555, 5, 9);
+console.log(biggesetNumber);
+
+//finding lowest number 
+const lowestNumber = Math.min(100, 200, 50, 40, 44, 555, 5, 9);
+console.log(lowestNumber);
+//===============================================
+
+
+
+
+//====================dynamic string==================
+const fName = "Sanjoy";
+const lastName = "Kundu";
+const idCard = 110;
+const country = "Bangladesh"
+
+const myBio = `Hello! This is ${fName} ${lastName}. I am form ${country}. My Card number is ${idCard}`;
+console.log(myBio);
+//====================================================
+
+
+
+
+//===============destructruing Object ======================
+/*kono akta object er property er value  akta object hoite pare*/
+const place = {
+	placeName: "Madaripur",
+	schools:
+	{
+		one: "Kulpaddi High School",
+		two: "United Islamia govt school",
+		three: "Donovan govt girl high school",
+		four: "Thank You"
+	},
+	students:
+	{
+		kulpaddiSchools: 110,
+		donovanSchool: 200,
+		uiSchool: 400
+	},
+	postCode: 7902,
+}
+console.log("Girls schools name is " + place.schools.three);
+console.log("Madaripur postal code is" + place.postCode);
+//============================================================
+
+
+
+
+
+
+
+//=================array destructuring==========================
+
+const [sri1, sri2, sri3, sri4] = ["Sanjoy", "Robiul", "Karim", "Kawsor"];
+console.log("My name is " + sri2, "My name is " + sri3);
+
+//========================================================
+
+
+
+
+
+
+
+
+
+
+
+
+//==============arrow map to do one line magic=================
+
+const square = [10, 5, 4, 3];
+const squareResult = square.map(anyName => anyName * 2);
+console.log(squareResult);
+
+//======================================
+
+
+
+
+
+
+
+
+
+
+// =======================just find the output of prduct array  using map and output all product name 
+const products = [
+	{ name: "Iphone", price: 200000, color: "black" },
+	{ name: "vivo", price: 2400, color: "red" },
+	{ name: "lenevo-Laptop", price: 29000, color: "green" },
+	{ name: "Monitor", price: 15000, color: "black" },
+];
+//finding all product name
+const allName = products.map(laptop => laptop.name);
+console.log(allName);
+//finding all product price 
+const productPrice = products.map(price => price.price);
+console.log(productPrice);
+// finding all product color 
+const productColor = products.map(colors => colors.color);
+console.log(productColor);
+
+
+//======================================================
+
+
+
+
+
+/* =================filter ===========================*/
+const useFilter = [
+	{ name: "PC-1", motherBord: "gigabyte-1", price: 150000, color: "red" },
+	{ name: "PC-2", motherBord: "gigabyte-2", price: 1500, color: "orange" },
+	{ name: "PC-3", motherBord: "gigabyte-3", price: 20000, color: "blue" },
+	{ name: "PC-5", motherBord: "gigabyte-5", price: 70000, color: "red" },
+	{ name: "PC-6", motherBord: "gigabyte-7", price: 1500, color: "red" },
+];
+
+//filter loop cholaiye condition follow kore
+/* const filter = useFilter.filter(anyName => anyName.price > 20000);
+console.log(filter);
+
+const filterColor = useFilter.filter(anyColor => anyColor.color == "red");
+console.log(filterColor);
+ */
+
+
+//using find 
+const useFind = useFilter.find(redFind => redFind.color = "red");
+console.log(useFind);
+
+
